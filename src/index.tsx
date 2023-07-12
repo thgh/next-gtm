@@ -39,7 +39,7 @@ export const GoogleTagManagerBody = GTM_ID ? (
       async
       defer
       id="gtm-body"
-      strategy="lazyOnload"
+      strategy="afterInteractive"
     />
     <noscript>
       <iframe
