@@ -9,15 +9,16 @@ type WindowWithDataLayer = Window & {
 
 declare const window: WindowWithDataLayer
 
-export const NEXT_PUBLIC_GTM_LOG = !!process.env.NEXT_PUBLIC_GTM_LOG
+export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
+export const GTM_LOG = !!process.env.NEXT_PUBLIC_GTM_LOG
 
 export const GoogleTagManagerClient = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  if (NEXT_PUBLIC_GTM_LOG) {
+  if (GTM_LOG) {
     useEffect(() => {
-      console.log('next-gtm enabled')
+      console.log('next-gtm', GTM_ID)
     }, [])
   }
 
@@ -34,7 +35,7 @@ export const pageview = (url: string) => {
   if (typeof window.dataLayer !== 'undefined') {
     const input = { event: 'pageview', page: url }
     window.dataLayer.push(input)
-    if (NEXT_PUBLIC_GTM_LOG) {
+    if (GTM_LOG) {
       console.log('next-gtm', input)
     }
   }
