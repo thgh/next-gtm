@@ -15,17 +15,17 @@ export const GoogleTagManagerClient = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  useEffect(() => {
-    if (pathname) {
-      pageview(pathname)
-    }
-  }, [pathname, searchParams])
-
   if (NEXT_PUBLIC_GTM_LOG) {
     useEffect(() => {
       console.log('next-gtm enabled')
     }, [])
   }
+
+  useEffect(() => {
+    if (pathname) {
+      pageview(pathname)
+    }
+  }, [pathname, searchParams])
 
   return null
 }

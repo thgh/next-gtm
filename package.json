@@ -2,7 +2,7 @@
   "name": "@thgh/next-gtm",
   "description": "Google Tag Manager for Next.js 13",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "pub": "yarn build && npx npm publish --registry https://registry.npmjs.org/ --access public",
     "build": "bunchee --external=./Client"
