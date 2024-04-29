@@ -2,7 +2,7 @@
   "name": "@thgh/next-gtm",
   "description": "Google Tag Manager for Next.js 13",
   "license": "MIT",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "scripts": {
     "pub": "yarn build && npx npm publish --registry https://registry.npmjs.org/ --access public",
     "build": "bunchee --external=./Client"
@@ -31,7 +31,7 @@
     "typescript": "^5"
   },
   "peerDependencies": {
-    "next": "^13",
+    "next": "^13 || ^14",
     "react": "^18",
     "react-dom": "^18"
   },
