@@ -4,7 +4,7 @@
   "license": "MIT",
   "version": "0.1.5",
   "scripts": {
-    "pub": "yarn build && npx npm publish --registry https://registry.npmjs.org/ --access public",
+    "pub": "yarn build && npm publish --registry https://registry.npmjs.org/ --access public",
     "build": "bunchee --external=./Client"
   },
   "exports": {
